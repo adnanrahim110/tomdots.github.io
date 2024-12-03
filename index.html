@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -84,16 +85,18 @@
             <div class="row flex-column-reverse flex-lg-row align-items-center justify-content-between">
               <div class="col-lg-5">
                 <div class="hero-text">
-                  <h6 class="sub-title">Tom Dots Doherty’s new crime thriller</h6>
-                  <h1>JimiJix Special Brew</h1>
-                  <p>embrace change, embrace adventure, and secure your copy today.</p>
+                  <h6 class="sub-title animate__animated animate__fadeInUp">Tom Dots Doherty’s new crime thriller</h6>
+                  <h1 class="animate__animated animate__fadeInUp animate_delay-100ms">JimiJix Special Brew</h1>
+                  <p class="animate__animated animate__fadeInUp animate_delay-200ms">embrace change, embrace adventure,
+                    and secure your copy today.</p>
                   <a href="https://www.amazon.com/JimiJix-Special-Brew-Tom-Doherty-ebook/dp/B0D3FNXMR5" target="_blank"
                     class="btn main-btn">Get the Book Now</a>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="hero-img">
-                  <img src="assets/imgs/hero-img.png" alt="Hero Image" class="img-fluid">
+                  <img src="assets/imgs/hero-img.png" alt="Hero Image"
+                    class="img-fluid animate__animated animate__fadeInRight animate__slow">
                 </div>
               </div>
             </div>
@@ -147,7 +150,7 @@
         <div class="container">
           <div class="row justify-content-between align-items-center">
             <div class="col-lg-5">
-              <div class="book-left position-relative">
+              <div data-aos="fade-right" data-aos-duration="1000" class="book-left position-relative">
                 <div class="auhtor-img">
                   <img src="assets/imgs/author.jpg" alt="">
                 </div>
@@ -157,7 +160,7 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="book-text">
+              <div data-aos="fade-up" data-aos-duration="1000" class="book-text">
                 <h6 class="sub-title">About the Author</h6>
                 <h2>JimiJix Special Brew</h2>
                 <p class="tagline"><span>By </span> Tom Dots Doherty</p>
@@ -184,7 +187,7 @@
         </div>
       </section>
       <section class="cta-sec section-padding-block bg-dark">
-        <div class="row">
+        <div data-aos="fade-up" data-aos-duration="1000" class="row">
           <div class="col-lg-8">
             <h1>Get the Book Now.</h1>
           </div>
@@ -200,7 +203,7 @@
         <div class="container">
           <div class="row justify-content-between align-items-center">
             <div class="col-lg-6">
-              <div class="author-img">
+              <div data-aos="fade-up" data-aos-duration="1000" class="author-img">
                 <img src="assets/imgs/author.jpg" alt="">
                 <ul class="author-social">
                   <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -210,7 +213,7 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="author-text">
+              <div data-aos="fade-up" data-aos-duration="1000" class="author-text">
                 <h6 class="sub-title">About the Author</h6>
                 <h2>Meet the Author</h2>
                 <p>
@@ -263,7 +266,7 @@
               </div>
             </form>
           </div>
-          <div class="contact-img">
+          <div data-aos="fade-left" data-aos-duration="1000" class="contact-img">
             <img src="assets/imgs/book-bg.png" alt="">
           </div>
         </div>
@@ -272,7 +275,7 @@
   </main>
   <footer>
     <div class="container px-0 px-sm-0">
-      <div class="footer-inner bg-dark section-padding-block-half">
+      <div data-aos="fade-up" data-aos-duration="1000" class="footer-inner bg-dark section-padding-block-half">
         <div class="row">
           <div class="col-12 text-center">
             <div class="ft-top">
@@ -314,11 +317,11 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/9bd98cd353.js" crossorigin="anonymous"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script> new WOW().init(); </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init(); </script>
   <script src="assets/js/script.js"></script>
 </body>
 
