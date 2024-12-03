@@ -1,0 +1,23 @@
+@mixin b-radius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  border-radius: $val;
+}
+
+@mixin transition($var: all, $time: 0.3s, $type: ease-in) {
+  transition: $var $time $type;
+  -webkit-transition: $var $time $type;
+  -moz-transition: $var $time $type;
+}
+
+@mixin flex($flex: flex, $align-items: center, $justify-content: center) {
+  display: $flex;
+  -webkit-display: $flex;
+  -moz-display: $flex;
+  align-items: $align-items;
+  -moz-align-items: $align-items;
+  -webkit-flex-direction: $flex;
+  justify-content: $justify-content;
+  -webkit-justify-content: $justify-content;
+  -moz-justify-content: $justify-content;
+}

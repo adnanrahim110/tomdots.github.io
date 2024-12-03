@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$primary-color: #80342f;
+$secondary-color: #333333;
+$bg-color: #eee8c9;
+$text-color: #434343;
+$primary-font: "Poppins", serif;
+$secondary-font: "Libre Baskerville", serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+}
+
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+* ::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 1px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 0;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: $primary-color #fff;
+  }
+}
+
+body {
+  color: $text-color;
+  overflow-x: hidden !important;
+}
+
+* ::selection {
+  background-color: $primary-color;
+  color: white;
+}
+
+.trans-20 {
+  transform: translateX(300px);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  height: 100vh;
+  width: calc(100% - 300px);
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+main {
+  transform: translateX(0);
+  @include transition();
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @include transition($time: 0.2s);
+}
+
+a:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-dark {
+  background-color: #1c1c1c !important;
+}
+
+.bg-colored {
+  background-color: $bg-color;
+}
+
+.section-padding-block {
+  padding-block: 90px;
+}
+
+.section-padding-block-half {
+  padding-block: 45px;
+}
+
+.sub-title {
+  color: $primary-color;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 0 0 25px;
+}
+
+.tagline {
+  margin: 30px 0 10px;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.tagline span {
+  color: #505050;
+}
+
+.btn.main-btn {
+  @include b-radius(0);
+  background-color: $secondary-color;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  padding: 13px 35px;
+}
+
+.btn.main-btn:is(:hover, :focus, :active) {
+  background-color: $primary-color;
+}
+
+.btn.second-btn {
+  @include b-radius(0);
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  padding: 13px 35px;
+}
+
+.btn.second-btn:is(:hover, :focus, :active) {
+  background-color: lighten($color: $primary-color, $amount: 10%);
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
