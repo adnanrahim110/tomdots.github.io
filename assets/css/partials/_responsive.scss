@@ -4,17 +4,21 @@
   }
 
   #sticky-header {
-    height: 70px;
+    height: 84.92px;
   }
 
   header {
     #navbar.fixed {
       height: 70px;
-
-      .navbar-inner::before {
-        background-color: transparent;
-      }
     }
+
+    .logo {
+      margin-right: 50px;
+    }
+    .navbar-inner {
+      padding-inline: 20px;
+    }
+
     .navbar-inner .navbar-nav .nav-link {
       display: none;
     }
@@ -28,6 +32,64 @@
 
     .btn {
       font-size: 15px;
+    }
+  }
+
+  .hero-sec {
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    .hero-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-text {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  .book-sec {
+    .book-text {
+      margin-top: 30px;
+    }
+  }
+
+  .cta-sec {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .author-sec .author-text {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #sticky-header {
+    height: 55.92px;
+  }
+  header {
+    .navbar-inner {
+      justify-content: center !important;
+    }
+    .logo {
+      margin-right: 50%;
+      transform: translateX(50%);
+      margin-left: auto;
+    }
+  }
+
+  .hero-sec {
+    padding-top: 100px;
+
+    .hero-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -78,6 +140,10 @@
       padding-inline: 10px;
       text-align: center;
 
+      h1 {
+        font-size: 40px;
+      }
+
       .sub-title {
         font-size: 12px;
         font-weight: 600;
@@ -90,8 +156,6 @@
   }
 
   .quotes-sec {
-    padding-block: 35px;
-
     .marquee-content {
       gap: 30px;
     }
@@ -111,10 +175,8 @@
       width: 80%;
     }
     .book-img {
-      transform: translate(0%, -50%);
-
       img {
-        max-height: 250px;
+        max-height: 450px;
       }
     }
 
@@ -130,11 +192,11 @@
 
   .qoute-inner {
     p {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     h5 {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -178,8 +240,6 @@
 
       .contact-form {
         margin-top: 30px;
-        width: 100%;
-        padding: 20px 20px 0;
 
         form {
           h3 {
@@ -214,5 +274,9 @@
       text-align: center;
       margin-block: 30px 0;
     }
+  }
+
+  .blog-hero {
+    height: 500px;
   }
 }

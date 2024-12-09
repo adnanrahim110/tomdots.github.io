@@ -64,23 +64,22 @@ $(document).ready(function () {
   let year = new Date().getFullYear();
   $('#year').text(year);
 
-  $('.form-control').on('focus', function () {
-    $(this).siblings('.form-label').css({
-      transform: 'translateY(17px)',
-      transition: 'transform 0.3s ease',
-      'background-color': '#faf9f0'
-    });
-  });
+  // $('.form-control').on('focus', function () {
+  //   $(this).siblings('.form-label').css({
+  //     transform: 'translateY(10px)',
+  //     transition: 'transform 0.3s ease',
+  //     'font-size': '12px'
+  //   });
+  // });
 
-  $('.form-control').on('blur', function () {
-    if ($(this).val().trim() === '') {
-      $(this).siblings('.form-label').css({
-        transform: 'translateY(0)',
-        'background-color': '#fff'
-
-      });
-    }
-  });
+  // $('.form-control').on('blur', function () {
+  //   if ($(this).val().trim() === '') {
+  //     $(this).siblings('.form-label').css({
+  //       transform: 'translateY(30px)',
+  //       'font-size': '14px'
+  //     });
+  //   }
+  // });
 
   let lastScrollTop = 0;
   function initDynamicNavbar() {

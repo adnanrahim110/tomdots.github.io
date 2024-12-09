@@ -5,48 +5,85 @@
 // HERO SECTION
 
 .hero-sec {
-  background-color: #e7e6e0;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 55%,
+      darken($color: rgba(128, 52, 47, 0.8), $amount: 20%)
+    ),
+    url(../imgs/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(10px);
   padding-inline: 10px 0;
+  padding-top: 130px;
 
   .hero-text h1 {
     line-height: 1.4;
     font-size: 48px;
+    color: #fff;
   }
 
   .hero-text p {
     margin-block: 30px 40px;
     text-transform: capitalize;
   }
+
+  .hero-img img {
+    max-height: 450px;
+  }
 }
 
 // QUOTES SECTION
 
 .quotes-sec {
-  padding-block: 50px;
-
   .marquee {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     width: 100%;
-    background: #ffffff;
+    background-color: #dcbc04;
+    padding-block: 5px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
   }
 
   .marquee-content {
     display: flex;
-    gap: 50px;
+    gap: 60px;
     animation: scroll 20s linear infinite;
   }
 
   .marquee-content li {
     white-space: nowrap;
+    position: relative;
+  }
+  .marquee-content li:before,
+  .marquee-content li:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 65px;
+    width: 65px;
+    background-color: #000;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+  }
+  .marquee-content li:before {
+    left: 0;
+    transform: translateY(-50%) translateX(-70px);
+  }
+
+  .marquee-content li:after {
+    right: 0;
+    transform: translateY(-50%) translateX(35px);
   }
 
   .marquee-content li p {
     margin-bottom: 0;
     text-transform: capitalize;
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 600;
+    padding-inline: 5px;
   }
 
   .marquee-content li:nth-child(odd) p {
@@ -70,91 +107,63 @@
 // BOOK SECTION
 
 .book-sec {
-  .auhtor-img {
-    height: 100%;
-    max-height: 550px;
-  }
-
-  .auhtor-img img {
-    width: 100%;
-    height: 100%;
-    max-height: 550px;
-    object-fit: cover;
-    object-position: top;
-  }
-
   .book-text {
     padding-right: 20px;
-  }
 
-  .book-text p:not(.tagline) {
-    margin-block: 30px 40px;
-    line-height: 2;
-  }
+    h2 {
+      color: #fff;
+    }
 
-  .book-img {
-    position: absolute;
-    top: 50%;
-    transform: translate(30%, -50%);
-    transform-origin: center;
-    right: 0;
-    overflow: hidden;
+    p.tagline {
+      color: $bg-color;
+    }
+
+    p:not(.tagline) {
+      margin-block: 30px 40px;
+      line-height: 2;
+    }
   }
 
   .book-img img {
     width: auto;
     height: 100%;
-    max-height: 450px;
+    max-height: 470px;
     object-fit: cover;
   }
 }
 
 // QOUTE SECTION
 
-.quotes-sec::before,
-.quotes-sec::after {
-  content: "";
-  position: absolute;
-  width: 5rem;
-  height: 100%;
-  z-index: 2;
-  top: 0;
+.qoute-sec {
+  background: url(../imgs/crime-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.quotes-sec:before {
-  left: 0;
-  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.2));
-}
-
-.quotes-sec:after {
-  right: 0;
-  background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0.2));
-}
-.qoute-inner p {
-  font-size: 30px;
-  color: $primary-color;
-  margin-bottom: 30px;
-}
-
-.qoute-inner h5 {
-  font-size: 22px;
+.qoute-inner {
+  p {
+    font-size: 30px;
+    color: $primary-color;
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: 22px;
+  }
 }
 
 // CTA SECTION
 
 .cta-sec {
   padding-inline: 30px;
-}
-
-.cta-sec h1 {
-  color: $bg-color;
-}
-
-.cta-sec .btn i {
-  // color: #ff6200;
-  color: #000;
-  font-size: 25px;
-  transform: translateY(3px);
+  h1 {
+    color: $bg-color;
+  }
+  .btn i {
+    color: #000;
+    font-size: 25px;
+    transform: translateY(3px);
+  }
 }
 
 // AUTHOR SECTION
@@ -244,54 +253,76 @@
 
 // CONTACT SECTION
 
-.contact-inner {
-  @include flex($justify-content: space-between);
-}
+.contact-sec {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imgs/contact-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 50px !important;
 
-.contact-inner .contact-form {
-  width: 50%;
-}
+  h3 {
+    margin-bottom: 20px;
+    font-size: 55px;
+    color: $bg-color;
+  }
 
-.contact-form form h3 {
-  margin-bottom: 20px;
-  font-size: 40px;
-  color: $primary-color;
-}
+  .contact-form {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 3rem;
+    position: relative;
 
-.contact-form .form-label {
-  margin-left: 10px;
-  padding-inline: 3px;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  transform: translateY(0);
-  pointer-events: none;
-}
+    .form-group {
+      position: relative;
+    }
 
-.contact-form .form-control {
-  border-radius: 0;
-  padding: 13px;
-  resize: none;
-  font-size: 15px;
-  border-color: transparent;
-  background-color: lighten($color: $bg-color, $amount: 10%);
-}
+    .form-label {
+      padding-inline: 3px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include transition();
+    }
 
-.contact-form .form-control:focus {
-  border-color: $primary-color;
-  box-shadow: none;
-}
+    .text .form-label {
+      transform: translateY(-150%);
+    }
+    .form-control {
+      border-radius: 0;
+      padding: 10px;
+      resize: none;
+      font-size: 15px;
+      color: $text-color;
+      border: none;
+      border-bottom: 2px solid #e0e0e0;
+      background-color: transparent;
+    }
+    .form-control:focus {
+      border-color: $bg-color;
+      box-shadow: none;
+    }
 
-.form-control:focus ~ .form-label {
-  transform: translateY(20px);
-}
+    .form-control:focus ~ .form-label {
+      transform: translateY(-200%);
+      font-size: 10px;
+    }
 
-.contact-form .form-control::placeholder {
-  color: lighten($color: $text-color, $amount: 30%);
-}
-
-.contact-inner .contact-img {
-  width: 47%;
+    .text .form-control:focus ~ .form-label {
+      transform: translateY(-350%);
+    }
+  }
 }
 
 // BLOGS PAGE
@@ -299,7 +330,7 @@
 .blog-hero {
   background: url(../imgs/blogs-hero.jpg) no-repeat center;
   background-size: cover;
-  height: 400px;
+  height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,6 +353,8 @@
 }
 
 .blog-card.card {
+  background-color: lighten($color: #000, $amount: 10%);
+
   .card-header img {
     min-height: 180px;
     max-height: 180px;
@@ -341,6 +374,10 @@
       font-family: $secondary-font;
       font-size: 22px;
       line-height: 1.5;
+    }
+
+    .card-title:hover {
+      color: $primary-color;
     }
 
     .read-more {
