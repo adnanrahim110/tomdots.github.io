@@ -578,8 +578,8 @@ aside .sidebar-open {
 .author-sec .author-img img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: bottom;
+     object-position: bottom;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;

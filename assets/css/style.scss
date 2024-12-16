@@ -234,7 +234,7 @@
 
 .author-sec .author-img img {
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
   @extend .author-img;
   @include transition();
 }
